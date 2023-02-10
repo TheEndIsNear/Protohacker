@@ -1,0 +1,19 @@
+# fly.toml file generated for red-frost-9191 on 2023-02-10T15:06:57-07:00
+
+app = "red-frost-9191"
+kill_signal = "SIGINT"
+kill_timeout = 5
+processes = []
+
+[env]
+
+[experimental]
+  auto_rollback = true
+
+[[services]]
+  internal_port = 8080
+  protocol = "tcp"
+
+  [[services.ports]]
+    port=80
+

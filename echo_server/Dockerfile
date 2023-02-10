@@ -31,7 +31,7 @@ COPY entrypoint.sh .
 RUN chown -R nobody: /app
 USER nobody
 
-EXPOSE 9000
+EXPOSE 8080
 
 ENV HOME=/app
 

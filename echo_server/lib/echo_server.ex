@@ -3,7 +3,11 @@ defmodule EchoServer do
   Documentation for `EchoServer`.
   """
 
+  require Logger
+
   def start_link(port \\ 8000) do
+    Logger.info("listening on port: #{port}")
+
     port
     |> listen()
     |> accept()
