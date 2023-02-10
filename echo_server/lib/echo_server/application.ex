@@ -7,10 +7,7 @@ defmodule EchoServer.Application do
 
   @impl true
   def start(_type, _args) do
-    children = [
-      # Starts a worker by calling: EchoServer.Worker.start_link(arg)
-      # {EchoServer.Worker, arg}
-    ]
+    children = [%{id: EchoServer, start: {EchoServer, :start_link, [9000]}}]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
     # for other strategies and supported options
